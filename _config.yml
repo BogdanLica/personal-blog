@@ -52,6 +52,15 @@ index_generator:
   per_page: 10
   order_by: -date
   
+# Support for emoji 
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+
 # Category & Tag
 default_category: uncategorized
 category_map:
