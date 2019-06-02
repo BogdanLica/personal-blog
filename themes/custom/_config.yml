@@ -129,7 +129,7 @@ open_graph:
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
   enabled: true
-  id: UA-141259852-1
+  id: 'UA-141259852-1'
 
 
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
