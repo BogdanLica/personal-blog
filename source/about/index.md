@@ -21,6 +21,9 @@ I'm Bogdan and I love to build (program) and break (hack) stuff. As so, my artic
 
 
 [![Countercept](/../resources/countercept.png)](https://www.countercept.com/)
+* this summer, stay tuned :grin:
+
+
 
 For full details, checkout my [CV](/../resources/cv_bogdan_lica.pdf).
 
@@ -34,7 +37,9 @@ I have been doing photography for a couple of years by now in different forms su
 * landscapes
 * architecture
 
-
+![](/../resources/photography/1.jpg)
+![](/../resources/photography/2.jpg)
+![](/../resources/photography/3.jpg)
 
 ### Dancing :dancers:
 
