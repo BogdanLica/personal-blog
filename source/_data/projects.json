@@ -1,12 +1,22 @@
 [
     {
-       "name":"Hexo",
-       "url":"https://hexo.io/",
-       "desc":"A fast, simple & powerful blog framework"
+       "name":"Around the Globe",
+       "url":"../projects",
+       "desc":"A trivia game as an Alexa Skill"
     },
     {
-       "name":"Font Awesome",
-       "url":"http://fontawesome.io/",
-       "desc":"The iconic font and CSS toolkit"
-    }
+       "name":"SAPIENS Programming Language",
+       "url":"../projects",
+       "desc":"A programming language written in Haskell"
+    },
+    {
+       "name":"Ad Dashboard",
+       "url":"../projects",
+       "desc":"A user dashboard for analytics"
+    },
+    {
+      "name":"Soton Bus Bot",
+      "url":"https://github.com/MariaPet/ecss-campus-hack",
+      "desc":"A Facebook Bot to get the bus times in your location"
+   }
 ]

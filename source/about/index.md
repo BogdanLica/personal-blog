@@ -5,7 +5,7 @@ date: 2019-06-01 20:34:29
 
 # Hi :wave:
 
-I'm Bogdan and I love to build (program) and break (hack) stuff. As so, my articles are related to this, but sometimes I write about other things such as burnout :tired_face: , photography :camera: or travelling :tokyo_tower: .
+I'm Bogdan and I love to build (program) and break (hack) stuff. As so, my articles are related to this, but sometimes I write about other things such as burnout :tired_face: , photography :camera: or travelling :earth_americas: .
 
 
  
