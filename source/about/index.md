@@ -44,6 +44,12 @@ I have been doing photography for a couple of years by now in different forms su
 ### Dancing :dancers:
 
 I do it from time to time (DISCLAIMER: I am the worst)
+
+![](/../resources/dancing/dancing.jpg)
+
+
 ### Cars :car:
 
 What can I say, that is a happy fellow :satisfied:
+
+![](/../resources/cars/car.jpg)
