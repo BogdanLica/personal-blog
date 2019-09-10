@@ -14,18 +14,18 @@ I'm Bogdan and I love to build (program) and break (hack) stuff. As so, my artic
 
 ## Experience
 
-[![MWR](/../resources/mwr.png)](https://www.mwrinfosecurity.com/)
+[![MWR / F-Secure Cyber Services](/../resources/mwr.png)](https://www.mwrinfosecurity.com/)
 * having fun while hacking a fictitious website
 * playing with z/OS for mainframes
 * learning about reverse engineering on IOS
 
 
 [![Countercept](/../resources/countercept.png)](https://www.countercept.com/)
-* this summer, stay tuned :grin:
+* releasing a platform in production
+* building pipelines in Gitlab
+* playing with ElasticSearch and Zabbix
 
 
-
-For full details, checkout my [CV](/../resources/cv_bogdan_lica.pdf).
 
 
 ## Interests

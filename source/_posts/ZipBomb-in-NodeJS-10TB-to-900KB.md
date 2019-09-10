@@ -115,8 +115,8 @@ function calculateSize(number, unit) {
 
     return sizes[unit];
 }
-
 ```
+
 4. Define the Readable stream
     * if we still need to send data we will write a string of size *chunkSize* of '0's (the fastest way to do this will be to use the ES6 [repeat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat))
     * otherwise, we just signal that we are done sending data
@@ -157,6 +157,7 @@ rs._read = function () {
     console.log(`I am at ${Math.round(chunkSizeSoFar / totalSize * 100)} %.`)
 };
 ```
+
 5. Pipe out the stream to GZIP and write the result to a file
 
 ```javascript
@@ -204,8 +205,6 @@ rs   // reads from my stream
     });
 ```
 
-
-
 #### Pause coding
 If you try to run the code so far, you will see it will generate an archive that in reality contains 100GB.
 Also, if you want proof that we have generated 100GB :
@@ -228,9 +227,6 @@ If you then follow the link to the [low-level API](https://zlib.net/manual.html#
    * we can increase the **level** to 9 to get the best compression rate
    * increase the **memlevel** to 9 to use more memory during compression
    * set **strategy** to 3 (3 is Run Length Encoding which will greatly benefit us, as we write the same thing over and over again)
-
-
-
 
 ```javascript
 const fs = require('fs');
@@ -281,15 +277,12 @@ rs   // reads from my stream
     });
 ```
 
-
-
 #### Resume coding
 Picking up from where we left, we now have the last layer, we just need to duplicate it, compress and repeat until we have reached the final level.
 1. Let's try to create a new archive where we duplicate the content of another archive
    * the tar module for node works the same way as the utility tar in Unix/Linux, so we can just pass it a list of file names and it will create an archive out of that 
    * we will use the ES6 [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to generate a list of file names (we will use the same file, instead of generating fresh ones, just like when you do a copy-and-paste )
    * the tar module can call gzip for us when it is done, so we will use that, instead of piping it ourselves
-
 
 ```javascript
 const fs = require('fs');
@@ -356,12 +349,12 @@ rs   // reads from my stream
     });
 ```
 
-<!-- It works 🙌🎉 -->
-2. We need to repeat the process again, until we have reached the top layer that we defined:
+1. We need to repeat the process again, until we have reached the top layer that we defined:
 
 ```javascript
 const levels = 2;
 ```
+
    * we want to do this sequentially so that when **myfile1.tgz** is done, the next step is to make 10 copies of that and then to create **myfile2.tgz**, delete **myfile1.tgz**, then repeat the process. For this we will pack our logic from above in a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
 ```javascript
@@ -396,7 +389,6 @@ function compressAndBundle(level) {
 
    * in order to avoid the [callback hell](http://callbackhell.com/), we will make use of a helper function that uses [for ... of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) and [async/await](https://javascript.info/async-await):
 
-
 ```javascript
 async function process(levels) {
     console.log('Trying to make a bigger archive...')
@@ -405,8 +397,8 @@ async function process(levels) {
         console.log(`Finished level ${res}`)
     }
 }
-
 ``` 
+
    * we will just need to call the **process(levels)** function and pass it an array like [0,1,2,3] to specify each level
 
 ```javascript
@@ -415,7 +407,7 @@ const increasing = [...Array(levels).keys()];
             .then(res => { console.log('Finished') })
             .catch(err => { console.log(err) })
 ``` 
----
+
 ## Final version of the code
 
 ```javascript
@@ -509,11 +501,7 @@ async function process(levels) {
         console.log(`Finished level ${res}`)
     }
 }
-
-
 ```
-
----
 
 ## Quick analysis
 
