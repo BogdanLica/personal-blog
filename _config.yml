@@ -69,8 +69,38 @@ githubEmojis:
   styles:
   customEmojis:
 
-all_minifier: false
+# all_minifier: true
 
+html_minifier:
+  enable: false
+  ignore_error: false
+  silent: false
+  exclude:
+
+css_minifier:
+  enable: true
+  silent: false
+  exclude: 
+    - '*.min.css'
+
+
+js_minifier:
+  enable: true
+  mangle: true
+  silent: false
+  output:
+  compress:
+  exclude: 
+    - '*.min.js'
+
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+  silent: false
 
 # Category & Tag
 default_category: uncategorized
